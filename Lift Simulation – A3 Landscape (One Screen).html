@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Penumpang dalam Lif – A3 Landscape</title>
+<style>
+:root{--bg:#e9e4dc;--pg:#fbf8f3;--card:#fff;--tx:#222;--mu:#666;--ln:#333;--ac:#e2571d;--bl:#1d6fd8;--gr:#e3ddd5;--ok:#1a8a4a;--sh:#eee8df;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0d0c;--pg:#1c1b1a;--card:#262523;--tx:#eee;--mu:#aaa;--ln:#ddd;--ac:#ff8a55;--bl:#6ab0ff;--gr:#3a3835;--ok:#5fd68b;--sh:#33312e}}
+:root[data-theme="dark"]{--bg:#0e0d0c;--pg:#1c1b1a;--card:#262523;--tx:#eee;--mu:#aaa;--ln:#ddd;--ac:#ff8a55;--bl:#6ab0ff;--gr:#3a3835;--ok:#5fd68b;--sh:#33312e}
+*{box-sizing:inherit}html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{height:100dvh}
+svg{display:block;width:100%;height:100%;touch-action:none;user-select:none;-webkit-user-select:none}
+svg text{fill:var(--tx)}
+[data-d],[data-b]{cursor:pointer}
+@media print{@page{size:A3 landscape;margin:0}html,body{overflow:visible}svg{width:420mm;height:297mm}}
+</style></head><body>
+<svg id="s" viewBox="0 0 1680 1188" preserveAspectRatio="xMidYMid meet"></svg>
+<script>
+const g=10,$=id=>document.getElementById(id),sv=$('s');
+const S={m:60,as:0,v0:0,t:0,pos:0,dv:600,v:0,target:null};
+const cs=()=>S.as==0?1:S.as>0?2:3,R=()=>S.m*(g+S.as),W=()=>S.m*g;
+const CX=880,CY=430,RR=215,RMAX=1500,ang=n=>(-135+Math.min(Math.max(n,0),RMAX)/RMAX*270)*Math.PI/180;
+const pt=(n,r,cx=CX,cy=CY)=>[cx+r*Math.sin(ang(n)),cy-r*Math.cos(ang(n))];
+const Y0=200,Y1=900,yZ=Y0+8/18*(Y1-Y0);
+const tx=(x,y,s,t,o='')=>`<text x="${x}" y="${y}" font-size="${s}" ${o}>${t}</text>`;
+const panel=(x,y,w,h,t)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="22" fill="var(--card)" stroke="var(--gr)" stroke-width="3"/>`+tx(x+22,y+38,26,t,'font-weight="700" style="fill:var(--ac)"');
+function build(){
+let h=`<defs>${[['R','#1d6fd8'],['W','#e2571d'],['A','#1a8a4a']].map(([k,c])=>`<marker id="m${k}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="${c}"/></marker>`).join('')}<clipPath id="cp"><rect x="140" y="150" width="450" height="810"/></clipPath></defs>
+<rect width="1680" height="1188" fill="var(--pg)"/>
+<rect x="20" y="14" width="1640" height="84" rx="18" fill="var(--ac)"/>
+${tx(48,66,44,'Penumpang dalam Lif: Mengapa Bacaan Penimbang Berubah?','font-weight="800" style="fill:#fff"')}
+${tx(1640,52,22,'SPM Fizik · KSSM Tingkatan 5','text-anchor="end" font-weight="700" style="fill:#fff"')}
+${tx(1640,82,20,'Passenger in a Lift · R, W &amp; F = ma · g = 10 m s⁻²','text-anchor="end" style="fill:#fff"')}
+${panel(20,112,590,880,'Lif / The lift  – seret a ⇅ / drag')}
+${panel(630,112,500,880,'Mesin penimbang / Weighing machine')}
+${panel(1150,112,510,450,'FBD – Gambar rajah jasad bebas')}
+${panel(1150,580,510,412,'Pengiraan / Working')}
+<rect x="140" y="150" width="450" height="810" fill="var(--sh)"/>
+<g clip-path="url(#cp)"><g id="tk">${Array.from({length:21},(_,i)=>`<line x1="146" x2="196" y1="${150+(i-1)*40}" y2="${150+(i-1)*40}" stroke="var(--mu)" stroke-width="4"/><line x1="550" x2="584" y1="${150+(i-1)*40}" y2="${150+(i-1)*40}" stroke="var(--mu)" stroke-width="4"/>`).join('')}</g></g>
+<rect x="205" y="170" width="340" height="772" rx="6" fill="var(--card)" stroke="var(--ln)" stroke-width="6"/>
+<line x1="375" y1="150" x2="375" y2="170" stroke="var(--ln)" stroke-width="5"/>
+<rect x="230" y="870" width="270" height="22" rx="4" fill="#8a8f98" stroke="var(--ln)" stroke-width="3"/>
+<rect x="472" y="680" width="16" height="190" fill="#8a8f98"/>
+<circle cx="480" cy="628" r="52" fill="#fff" stroke="var(--ln)" stroke-width="5"/>
+<line id="mn" x1="480" y1="628" x2="480" y2="588" stroke="#d22" stroke-width="5" stroke-linecap="round"/><circle cx="480" cy="628" r="6" fill="#222"/>
+${tx(480,534,22,'Mesin penimbang','text-anchor="middle" font-weight="700"')}${tx(480,558,19,'Weighing machine','text-anchor="middle" style="fill:var(--mu)"')}
+<g transform="translate(70 288) scale(2)" stroke="var(--ln)" stroke-width="2" fill="none">
+<circle cx="130" cy="130" r="18" fill="#f5d2a8"/><path d="M112 126q18-22 36 0" fill="#222" stroke="none"/>
+<rect x="114" y="150" width="32" height="46" rx="4" fill="#fff"/><path d="M114 160L98 190M146 160L162 190"/>
+<rect x="116" y="196" width="12" height="82" fill="#8a96b8"/><rect x="132" y="196" width="12" height="82" fill="#8a96b8"/>
+<ellipse cx="122" cy="286" rx="11" ry="6" fill="#c33"/><ellipse cx="138" cy="286" rx="11" ry="6" fill="#c33"/></g>
+<line id="aR" x1="250" y1="866" x2="250" y2="700" stroke="#1d6fd8" stroke-width="12" marker-end="url(#mR)"/>${tx(250,690,38,'R','id="lR" text-anchor="middle" font-weight="800" style="fill:#1d6fd8"')}
+<line id="aW" x1="410" y1="718" x2="410" y2="820" stroke="#e2571d" stroke-width="12" marker-end="url(#mW)"/>${tx(410,862,32,'W = mg','id="lW" text-anchor="middle" font-weight="800" style="fill:#e2571d"')}
+<line id="aA" x1="470" y1="340" x2="470" y2="340" stroke="#1a8a4a" stroke-width="12" marker-end="url(#mA)"/>${tx(470,300,32,'','id="lA" text-anchor="middle" font-weight="800" style="fill:#1a8a4a"')}
+${tx(375,978,26,'','id="vt" text-anchor="middle" font-weight="700"')}
+<!-- a track -->
+<rect data-d="a" x="60" y="${Y0}" width="30" height="${Y1-Y0}" rx="15" fill="var(--gr)"/>
+<rect x="60" y="${Y0}" width="30" height="${yZ-Y0}" rx="15" fill="#1d6fd8" opacity=".25" pointer-events="none"/><rect x="60" y="${yZ}" width="30" height="${Y1-yZ}" rx="15" fill="#e2571d" opacity=".25" pointer-events="none"/>
+<line x1="44" x2="106" y1="${yZ}" y2="${yZ}" stroke="var(--ln)" stroke-width="4"/>${tx(112,yZ+9,24,'a = 0','style="fill:var(--mu)"')}
+${tx(75,188,22,'↑ ke atas','text-anchor="middle" font-weight="700" style="fill:#1d6fd8"')}${tx(75,934,22,'↓ ke bawah','text-anchor="middle" font-weight="700" style="fill:#e2571d"')}
+<g data-d="a" id="ha"><circle cx="75" cy="${yZ}" r="34" fill="var(--ac)" stroke="#fff" stroke-width="5"/>${tx(75,yZ+11,30,'a','text-anchor="middle" font-weight="800" style="fill:#fff" pointer-events="none"')}</g>
+${tx(75,972,24,'','id="at" text-anchor="middle" font-weight="800"')}
+<!-- gauge -->
+<circle cx="${CX}" cy="${CY}" r="${RR+22}" fill="#fff" stroke="var(--ln)" stroke-width="9"/>`;
+for(let n=0;n<=RMAX;n+=50){const j=n%250==0,a=pt(n,RR),b=pt(n,RR-(j?30:14));h+=`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#222" stroke-width="${j?5:2}"/>`;if(j){const l=pt(n,RR-60);h+=tx(l[0],l[1]+9,28,n,'text-anchor="middle" font-weight="800" style="fill:#222"')}}
+h+=tx(CX,CY+30,22,'daya / force (N)','text-anchor="middle" style="fill:#555"')+`<polygon id="wm" fill="#e2571d"/>${tx(0,0,26,'W','id="wmt" text-anchor="middle" font-weight="800" style="fill:#e2571d"')}
+<line id="nd" x1="${CX}" y1="${CY}" x2="${CX}" y2="${CY-190}" stroke="#d22" stroke-width="9" stroke-linecap="round"/><circle cx="${CX}" cy="${CY}" r="14" fill="#222"/>
+<rect x="${CX-150}" y="${CY+62}" width="300" height="96" rx="12" fill="#111"/>${tx(CX,CY+135,66,'0 N','id="dg" text-anchor="middle" font-weight="800" style="fill:#6f6;font-family:monospace"')}
+${tx(CX,740,30,'','id="s1" text-anchor="middle" font-weight="800"')}${tx(CX,774,23,'','id="s2" text-anchor="middle" style="fill:var(--mu)"')}
+${tx(650,845,34,'R','font-weight="800" style="fill:#1d6fd8"')}<rect x="700" y="815" width="400" height="44" rx="8" fill="var(--gr)"/><rect id="bR" x="700" y="815" width="100" height="44" rx="8" fill="#1d6fd8"/>${tx(710,848,26,'','id="tR" style="fill:#fff" font-weight="800"')}
+${tx(650,925,34,'W','font-weight="800" style="fill:#e2571d"')}<rect x="700" y="895" width="400" height="44" rx="8" fill="var(--gr)"/><rect id="bW" x="700" y="895" width="100" height="44" rx="8" fill="#e2571d"/>${tx(710,928,26,'','id="tW" style="fill:#fff" font-weight="800"')}
+${tx(880,970,21,'Bandingkan R dengan W / Compare R with W','text-anchor="middle" style="fill:var(--mu)"')}
+<g id="fb"></g><g id="wk"></g>
+<!-- bottom controls -->
+${tx(40,1046,28,'','id="mt" font-weight="800"')}
+<rect data-d="m" x="60" y="1090" width="480" height="20" rx="10" fill="var(--gr)"/>
+<g data-d="m" id="hm"><circle cx="60" cy="1100" r="32" fill="var(--bl)" stroke="#fff" stroke-width="5"/>${tx(60,1111,28,'m','text-anchor="middle" font-weight="800" style="fill:#fff" pointer-events="none"')}</g>
+${tx(60,1148,20,'30 kg','style="fill:var(--mu)"')}${tx(540,1148,20,'80 kg','text-anchor="end" style="fill:var(--mu)"')}`;
+[['1','① Pegun / halaju seragam','Stationary / uniform velocity'],['2','② Memecut ke atas','Accelerates upwards'],['3','③ Memecut ke bawah','Accelerates downwards']].forEach(([k,a,b],i)=>{const x=620+i*285;
+ h+=`<g data-b="${k}"><rect id="cb${k}" x="${x}" y="1016" width="270" height="96" rx="16" stroke="var(--ac)" stroke-width="4"/>${tx(x+135,1056,25,a,'id="ca'+k+'" text-anchor="middle" font-weight="800" pointer-events="none"')}${tx(x+135,1088,21,b,'id="cc'+k+'" text-anchor="middle" pointer-events="none"')}</g>`});
+h+=`<g data-b="ch"><rect x="1480" y="1016" width="180" height="46" rx="12" fill="var(--bl)"/>${tx(1570,1048,24,'🎯 Cabaran','text-anchor="middle" font-weight="800" style="fill:#fff" pointer-events="none"')}</g>
+<g data-b="mv" id="mv"><rect x="1480" y="1070" width="180" height="46" rx="12" fill="var(--card)" stroke="var(--ac)" stroke-width="3"/>${tx(1570,1100,19,'','id="mvt" text-anchor="middle" font-weight="700" pointer-events="none"')}</g>
+${tx(840,1165,28,'','id="ft" text-anchor="middle" font-weight="800"')}`;
+sv.innerHTML=h}
+function fbd(){const r=R(),w=W(),F=r-w,k=0.085;let h=`<rect x="1363" y="298" width="84" height="84" rx="10" fill="var(--sh)" stroke="var(--ln)" stroke-width="3"/>${tx(1405,348,22,'m = '+S.m,'text-anchor="middle"')}
+<line x1="1405" y1="298" x2="1405" y2="${298-r*k}" stroke="#1d6fd8" stroke-width="11" marker-end="url(#mR)"/>${tx(1425,298-r*k+8,30,'R = '+r.toFixed(0)+' N','font-weight="800" style="fill:#1d6fd8"')}
+<line x1="1405" y1="382" x2="1405" y2="${382+w*k}" stroke="#e2571d" stroke-width="11" marker-end="url(#mW)"/>${tx(1425,382+w*k+34,30,'W = mg = '+w.toFixed(0)+' N','font-weight="800" style="fill:#e2571d"')}`;
+ if(Math.abs(F)>.5){const y2=340-F*k;h+=`<line x1="1590" y1="340" x2="1590" y2="${y2}" stroke="#1a8a4a" stroke-width="11" stroke-dasharray="14 8" marker-end="url(#mA)"/>${tx(1572,(340+y2)/2,26,'F = '+Math.abs(F).toFixed(0)+' N','text-anchor="end" font-weight="800" style="fill:#1a8a4a"')}${tx(1572,(340+y2)/2+28,22,F>0?'ke atas ↑ upwards':'ke bawah ↓ downwards','text-anchor="end" style="fill:#1a8a4a"')}`}
+ else h+=tx(1572,350,28,'F = 0','text-anchor="end" font-weight="800" style="fill:#1a8a4a"');
+ h+=tx(1170,535,19,'R normal reaction · W weight · F resultant','style="fill:var(--mu)"');$('fb').innerHTML=h}
+function work(){const m=S.m,a=Math.abs(S.as),c=cs();let L;
+ if(c==1)L=['Daya paduan / Resultant force, F = 0','R − mg = 0  →  R = mg',`R = ${m} × ${g} = ${R()} N`];
+ else if(c==2)L=['F ke atas ↑ / F upwards','R − mg = ma  →  R = m(g + a)',`R = ${m} × (${g} + ${a.toFixed(1)}) = ${R().toFixed(0)} N`,`F = ma = ${m} × ${a.toFixed(1)} = ${(m*a).toFixed(0)} N`];
+ else L=['F ke bawah ↓ / F downwards','mg − R = ma  →  R = m(g − a)',`R = ${m} × (${g} − ${a.toFixed(1)}) = ${R().toFixed(0)} N`,`F = ma = ${m} × ${a.toFixed(1)} = ${(m*a).toFixed(0)} N`];
+ let h=L.map((t,i)=>tx(1172,672+i*52,i==2?34:29,t,i==2?'font-weight="800" style="fill:#1d6fd8"':i==0?'font-weight="700"':'')).join('');
+ h+=tx(1172,895,22,'Mesin membaca R (daya tindak balas normal), BUKAN mg!','font-weight="800" style="fill:var(--ac)"')+tx(1172,925,19,'The machine reads R, NOT mg.','style="fill:var(--mu)"')+tx(1172,962,18,'Tip: nyatakan arah F · guna F = ma · sebut “normal reaction, R”','style="fill:var(--mu)"');$('wk').innerHTML=h}
+function ui(){const r=R(),w=W(),c=cs(),A=S.as;
+ const ym=yZ-(A/ (A>=0?8:10))*(A>=0?yZ-Y0:Y1-yZ);$('ha').firstChild.setAttribute('cy',ym);$('ha').lastChild.setAttribute('y',ym+11);
+ $('at').textContent=(A>0?'+':'')+A.toFixed(1)+' m s⁻²';$('mt').textContent=`Jisim / Mass m = ${S.m} kg  ← seret / drag`;
+ $('hm').firstChild.setAttribute('cx',60+(S.m-30)/50*480);$('hm').lastChild.setAttribute('x',60+(S.m-30)/50*480);
+ const k=.17,rl=Math.max(r*k,6),wl=Math.max(w*k,6);$('aR').setAttribute('y2',866-rl);$('lR').setAttribute('y',866-rl-14);$('aW').setAttribute('y2',718+wl);$('lW').setAttribute('y',718+wl+40);
+ const al=Math.abs(A)*14;$('aA').setAttribute('y2',340-Math.sign(A)*al);$('lA').textContent=A?'a = '+Math.abs(A).toFixed(1):'';$('lA').setAttribute('y',A>0?340-al-18:340+al+42);
+ const a1=pt(w,RR+4),a2=pt(w+30,RR+34),a3=pt(w-30,RR+34),wt=pt(w,RR+66);$('wm').setAttribute('points',`${a1} ${a2} ${a3}`);$('wmt').setAttribute('x',wt[0]);$('wmt').setAttribute('y',wt[1]+8);
+ const d=r-w,s=Math.abs(d)<.5?['Bacaan = berat budak','Reading = weight of the boy','#1a8a4a']:r<.5?['R = 0 → rasa tanpa berat','Apparent weightlessness (a = g)','#e2571d']:d>0?['Bacaan LEBIH BESAR daripada berat','Reading LARGER than the weight','#1d6fd8']:['Bacaan LEBIH KECIL daripada berat','Reading SMALLER than the weight','#e2571d'];
+ $('s1').textContent=s[0];$('s2').textContent=s[1];$('s1').style.fill=s[2];
+ $('bR').setAttribute('width',Math.max(r/1500*400,2));$('bW').setAttribute('width',w/1500*400);$('tR').textContent=r.toFixed(0)+' N';$('tW').textContent=w.toFixed(0)+' N';
+ [1,2,3].forEach(i=>{const on=c==i;$('cb'+i).setAttribute('fill',on?'#e2571d':'var(--card)');['ca','cc'].forEach(p=>$(p+i).style.fill=on?'#fff':'var(--tx)')});
+ $('mv').style.display=c==1?'':'none';$('mvt').textContent=S.v0?'Halaju seragam 4 m/s':'Pegun / Stationary';
+ if(S.target!=null){const ok=Math.abs(r-S.target)<=8;$('ft').textContent=`🎯 Dapatkan bacaan ${S.target} N (W = ${w} N)  ${ok?'✔ Betul! a = '+Math.abs(A).toFixed(1)+(A>0?' ke atas':A<0?' ke bawah':''):''}`;$('ft').style.fill=ok?'var(--ok)':'var(--bl)'}
+ else{$('ft').textContent='AHA! Mesin membaca R, BUKAN mg!  ·  Seret a ⇅ dan m untuk meneroka / Drag a and m to explore';$('ft').style.fill='var(--ac)'}
+ fbd();work()}
+let drag=null;
+const P=e=>{const p=sv.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(sv.getScreenCTM().inverse())};
+function move(e){if(!drag)return;const p=P(e);
+ if(drag=='a'){let a=8-(p.y-Y0)/(Y1-Y0)*18;a=Math.max(-10,Math.min(8,a));a=Math.round(a*10)/10;if(Math.abs(a)<.2)a=0;if(a!==S.as){S.as=a;S.t=0;S.pos=0}}
+ else{S.m=Math.round(Math.max(30,Math.min(80,30+(p.x-60)/480*50)))}
+ ui()}
+sv.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-b]');
+ if(b){const k=b.dataset.b;if(k=='ch'){const f=[.4,.6,.8,1.2,1.4,1.6][Math.floor(Math.random()*6)];S.target=Math.round(W()*f/10)*10}
+  else if(k=='mv'){S.v0=S.v0?0:4}else{const mag=Math.abs(S.as)||3;S.as=k=='1'?0:k=='2'?mag:-Math.min(mag,10);S.t=0;S.pos=0}ui();return}
+ const d=e.target.closest('[data-d]');if(d){drag=d.dataset.d;sv.setPointerCapture(e.pointerId);move(e)}});
+sv.addEventListener('pointermove',move);
+['pointerup','pointercancel'].forEach(n=>sv.addEventListener(n,()=>drag=null));
+let last=performance.now();
+function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;const A=S.as;
+ if(A!==0){S.t+=dt;if(S.t>3){S.t=0;S.pos=0}S.v=A*S.t}else{S.t=0;S.v=S.v0}
+ S.pos+=S.v*dt;$('tk').setAttribute('transform',`translate(0 ${((S.pos*26)%40+40)%40})`);
+ $('vt').textContent='v = '+S.v.toFixed(1)+' m s⁻¹';
+ S.dv+=(R()-S.dv)*Math.min(1,dt*9);const p=pt(S.dv,RR-22);$('nd').setAttribute('x2',p[0]);$('nd').setAttribute('y2',p[1]);
+ $('dg').textContent=Math.round(S.dv)+' N';const q=ang(S.dv);$('mn').setAttribute('x2',480+40*Math.sin(q));$('mn').setAttribute('y2',628-40*Math.cos(q));
+ requestAnimationFrame(frame)}
+build();ui();requestAnimationFrame(frame);
+</script></body></html>
